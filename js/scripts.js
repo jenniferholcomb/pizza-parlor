@@ -20,8 +20,11 @@ Pizza.prototype.calculateCost = function() {
 }
 
 // UI Logic
-function printOrder() {
-  document 
+function printOrder(pizza) {
+  console.log("we're here");
+  document.querySelector("div#order-details").removeAttribute("class");
+  document.querySelector(".toppings").innerText = pizza.toppings;
+  document.querySelector(".size").innerText = pizza.size;
 }
 
 function handlePizzaOrder(event) {
@@ -45,7 +48,7 @@ function handlePizzaOrder(event) {
   console.log(pizza);
   let cost = pizza.calculateCost();
   console.log(cost);
-
+  printOrder(pizza);
 }
 
 window.addEventListener("load", function() {
