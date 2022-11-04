@@ -37,7 +37,6 @@ Pizza.prototype.toppingsTicket = function() {
   return toppingsString;
 }
 
-
 // UI Logic
 function printOrder(pizza) {
   let toppingsString = pizza.toppingsTicket();
@@ -64,7 +63,6 @@ function handlePizzaOrder(event) {
 
   let mypizza = new Pizza(toppingsInput, sizeInput);
   mypizza.calculateCost();
-  console.log(mypizza.totalCost);
   printOrder(mypizza);
   document.querySelector("form#new-pizza").reset();
 }

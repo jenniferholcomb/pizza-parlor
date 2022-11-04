@@ -56,7 +56,7 @@ Input: Pizza {Toppings: ["pineapple", "pepperoni"]}
 Code:  for (index = 1; index < (Object.keys(this.toppings).length); index++)
 Output: "pineapple, pepperoni"
 
-Test: "Check if any toppings were added to order. If not returns a statement stating no toppings ordered.
+Test: "Check if any toppings were added to order. If not, returns a statement stating no toppings ordered.
 Code: if(this.toppings.length === 0)
 Output: "--NO TOPPINGS ADDED-"
 
@@ -64,6 +64,11 @@ Describe: CustomerOrders()
 Test: "It should add all pizzas ordered to object Orders."
 Code: const myOrders = new Orders([Pizza: {"Pineapple", medium, cost}, Pizza: {Extra Cheese, small, cost});
 Expected Output: [Orders[1]: {"Pineapple", medium, cost}, Orders[2]: {Extra Cheese, small, cost}
+
+Describe: CustomerOrders.prototype.addPizza
+Test: "It should add Pizza objects to CustomerOrders object."
+Code: this.orders = ["pizza1, pizza2]
+Output: "pizza1, pizza2"
 '''
 
 ## Known Bugs
