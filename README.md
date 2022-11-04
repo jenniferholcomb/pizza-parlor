@@ -25,7 +25,6 @@ This program allows a user to order a pizza on a website, user can choose toppin
 
 ''' 
 Describe: Pizza()
-
 Test: "It should return a Pizza object with three properties of toppings, size, and total cost of pizza."
 Code: const myPizza = new Pizza(["pineapple", "pepperoni"], "medium", 24);
 Expected Output: Pizza { toppings: ["pineapple", "pepperoni"], size: "medium", cost: 24}
@@ -61,6 +60,10 @@ Test: "Check if any toppings were added to order. If not returns a statement sta
 Code: if(this.toppings.length === 0)
 Output: "--NO TOPPINGS ADDED-"
 
+Describe: Orders()
+Test: "It should add all pizzas ordered to object Orders."
+Code: const myOrders = new Orders([Pizza: {"Pineapple", medium, cost}, Pizza: {Extra Cheese, small, cost});
+Expected Output: [Orders[1]: {"Pineapple", medium, cost}, Orders[2]: {Extra Cheese, small, cost}
 '''
 
 ## Known Bugs

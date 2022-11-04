@@ -58,11 +58,11 @@ function handlePizzaOrder(event) {
   }
   const sizeInput = document.getElementById("size-selection").value;
 
-  let pizza = new Pizza(toppingsInput, sizeInput);
-  pizza.calculateCost();
-  console.log(pizza.totalCost);
-  printOrder(pizza);
-//  document.querySelector("form#number-in").reset();
+  let mypizza = new Pizza(toppingsInput, sizeInput);
+  mypizza.calculateCost();
+  console.log(mypizza.totalCost);
+  printOrder(mypizza);
+  document.querySelector("form#new-pizza").reset();
 }
 
 window.addEventListener("load", function() {
