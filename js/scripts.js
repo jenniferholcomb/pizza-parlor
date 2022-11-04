@@ -10,6 +10,7 @@ Pizza.prototype.calculateCost = function() {
   let perTopping = 4;
   let medium = 6;
   let large = 10;
-  let cost = basePrice +_(this.toppings.length * perTopping) + this.size;
+  let cost = basePrice + (Object.keys(this.toppings).length * perTopping) + this.size;
+  
   
 }
