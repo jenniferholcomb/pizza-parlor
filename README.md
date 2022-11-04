@@ -54,7 +54,7 @@ Output: cost = cost + 10;
 Describe: Pizza.prototype.toppingsTicket = function()
 Test: "Loops through toppings keys in Pizza object, returns a string to print on ticket."
 Input: Pizza {Toppings: ["pineapple", "pepperoni"]}
-Code: Object.keys
+Code:  for (index = 1; index < (Object.keys(this.toppings).length); index++)
 Output: "pineapple, pepperoni"
 
 '''

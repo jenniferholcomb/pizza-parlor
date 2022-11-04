@@ -20,12 +20,17 @@ Pizza.prototype.calculateCost = function() {
 }
 
 Pizza.prototype.toppingsTicket = function() {
-  let toppingsString = "";
-  let index = 1;
-  Object.keys(this.toppings).forEach(function(key) {
-    toppingsString.concat(this.toppings[key]);
-    index++;
-  });
+
+
+  let toppingsString = this.toppings[0];
+  for (index = 1; index < (Object.keys(this.toppings).length); index++) {
+    toppingsString = toppingsString.concat(", " + this.toppings[index]);
+  }
+
+//  .forEach(function(key) {
+//     console.log(this.toppings[key]);
+
+//   });
   console.log(toppingsString);
   return toppingsString;
 
