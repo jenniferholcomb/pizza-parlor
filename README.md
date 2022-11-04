@@ -27,9 +27,13 @@ This program allows a user to order a pizza on a website, user can choose toppin
 Describe: Pizza()
 
 Test: "It should return a Pizza object with two properties for toppings and size."
-Code: const myPizza = new Pizza(["pineapple", "pepperoni"], "small");
-Expected Output: Pizza { toppings: ["pineapple", "pepperoni"], size: "small"}
+Code: const myPizza = new Pizza(["pineapple", "pepperoni"], "medium");
+Expected Output: Pizza { toppings: ["pineapple", "pepperoni"], size: "medium"}
 
+Describe: Pizza.prototype.calculateCost = function()
+Test: "It should take the user's topping and size selection, then determine cost of pizza."
+Code: let cost = 10 + (this.toppings.length * 4) + 6
+Expected Output: cost = 24
 
 '''
 
