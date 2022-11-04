@@ -3,6 +3,7 @@
 function Pizza(toppings, size) {
   this.toppings = toppings;
   this.size = size;
+  this.totalCost = 0;
 }
 
 Pizza.prototype.calculateCost = function() {
@@ -15,7 +16,7 @@ Pizza.prototype.calculateCost = function() {
   else if (this.size === "large") {
     cost += 10;
   }
-  return cost;
+  this.totalCost = cost;
 }
 
 // UI Logic
@@ -41,9 +42,8 @@ function handlePizzaOrder(event) {
   const sizeInput = document.getElementById("size-selection").value;
 
   let pizza = new Pizza(toppingsInput, sizeInput);
-  console.log(pizza);
-  let cost = pizza.calculateCost();
-  console.log(cost);
+  pizza.calculateCost();
+  console.log(pizza.totalCost);
   printOrder(pizza);
 }
 
