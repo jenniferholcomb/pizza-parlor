@@ -20,6 +20,10 @@ Pizza.prototype.calculateCost = function() {
 }
 
 // UI Logic
+function printOrder() {
+  document 
+}
+
 function handlePizzaOrder(event) {
   event.preventDefault();
 
@@ -41,6 +45,7 @@ function handlePizzaOrder(event) {
   console.log(pizza);
   let cost = pizza.calculateCost();
   console.log(cost);
+
 }
 
 window.addEventListener("load", function() {
