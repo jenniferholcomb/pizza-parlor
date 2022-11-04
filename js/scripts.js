@@ -9,7 +9,6 @@ Pizza.prototype.calculateCost = function() {
   let basePrice = 10;
   let perTopping = 4;
   let cost = basePrice + (Object.keys(this.toppings).length * perTopping);
-  console.log(cost);
   if (this.size === "medium") {
     cost += 6;
   }
@@ -21,7 +20,6 @@ Pizza.prototype.calculateCost = function() {
 
 // UI Logic
 function printOrder(pizza) {
-  console.log("we're here");
   document.querySelector("div#order-details").removeAttribute("class");
   document.querySelector(".toppings").innerText = pizza.toppings;
   document.querySelector(".size").innerText = pizza.size;
@@ -40,9 +38,7 @@ function handlePizzaOrder(event) {
   if (document.getElementById("topping3").checked === true) {
     toppingsInput.push("Extra Cheese");
   }
-  console.log(toppingsInput);
   const sizeInput = document.getElementById("size-selection").value;
-  console.log(sizeInput);
 
   let pizza = new Pizza(toppingsInput, sizeInput);
   console.log(pizza);
