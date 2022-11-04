@@ -20,3 +20,10 @@ Pizza.prototype.calculateCost = function() {
 }
 
 // UI Logic
+function handlePizzaOrder(event) {
+
+}
+
+window.addEventListener("load", function() {
+  document.querySelector(form#new-pizza).addEventListener("submit", handlePizzaOrder);
+})
