@@ -39,6 +39,18 @@ Test: "It should take the number of toppings in Pizza object and multiply by len
 Code: Object.keys(this.toppings).length * perTopping
 Output: 2 * 4 = 8
 
+Test: "If Pizza.size = small, no additional cost added to total cost."
+Code: if (pizza.size === "small")
+Output: return cost;
+
+Test: "If Pizza.size = medium, add 6 to total cost."
+Code: if (pizza.size = "medium")
+Output: cost = cost + 6;
+
+Test: "If Pizza.size = large, add 10 to total cost."
+Code: if (pizza.size = "large")
+Output: cost = cost + 10;
+
 '''
 
 ## Known Bugs
