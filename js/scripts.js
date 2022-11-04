@@ -3,6 +3,10 @@ function CustomerOrders() {
   this.orders = {};
 }
 
+CustomerOrders.prototype.addPizza = function(pizzas) {
+  this.orders = pizzas;
+}
+
 // Business logic for Pizza
 function Pizza(toppings, size) {
   this.toppings = toppings;
@@ -69,4 +73,5 @@ function handlePizzaOrder(event) {
 
 window.addEventListener("load", function() {
   document.querySelector("form#new-pizza").addEventListener("submit", handlePizzaOrder);
+  //document.querySelector("form#new-pizza").addEventListener("click", handlePizzaOrder);
 });
