@@ -35,6 +35,10 @@ Test: "It should take the user's topping and size selection, then determine cost
 Code: let cost = 10 + (this.toppings.length * 4) + 6
 Expected Output: cost = 24
 
+Test: "It should take the number of toppings in Pizza object and multiply by length of Pizza.toppings keys, and add to total cost."
+Code: Object.keys(this.toppings).length * perTopping
+Output: 2 * 4 = 8
+
 '''
 
 ## Known Bugs
