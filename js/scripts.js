@@ -1,15 +1,14 @@
 // Business logic for Pizza
 
 function Pizza(toppings, size) {
-  this.toppings = {};
-  this.size = null;
-
+  this.toppings = toppings;
+  this.size = size;
 }
 
 Pizza.prototype.calculateCost = function() {
   let basePrice = 10;
   let perTopping = 4;
-  let cost = basePrice + (Object.keys(this.toppings).length * perTopping) + this.size;
+  let cost = basePrice + (Object.keys(this.toppings).length * perTopping);
   console.log(cost);
   if (this.size === "medium") {
     cost += 6;
@@ -23,7 +22,6 @@ Pizza.prototype.calculateCost = function() {
 // UI Logic
 function handlePizzaOrder(event) {
   event.preventDefault();
-
 
   const toppingsInput = [];
   if (document.getElementById("topping1").checked === true) {
@@ -41,6 +39,8 @@ function handlePizzaOrder(event) {
 
   let pizza = new Pizza(toppingsInput, sizeInput);
   console.log(pizza);
+  let cost = pizza.calculateCost();
+  console.log(cost);
 }
 
 window.addEventListener("load", function() {
