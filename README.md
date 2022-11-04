@@ -57,6 +57,10 @@ Input: Pizza {Toppings: ["pineapple", "pepperoni"]}
 Code:  for (index = 1; index < (Object.keys(this.toppings).length); index++)
 Output: "pineapple, pepperoni"
 
+Test: "Check if any toppings were added to order. If not returns a statement stating no toppings ordered.
+Code: if(this.toppings.length === 0)
+Output: "--NO TOPPINGS ADDED-"
+
 '''
 
 ## Known Bugs

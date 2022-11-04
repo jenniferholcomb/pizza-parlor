@@ -20,20 +20,17 @@ Pizza.prototype.calculateCost = function() {
 }
 
 Pizza.prototype.toppingsTicket = function() {
+  let toppingsString = "";
+  if (Object.keys(this.toppings).length === 0) {
 
-
-  let toppingsString = this.toppings[0];
-  for (index = 1; index < (Object.keys(this.toppings).length); index++) {
-    toppingsString = toppingsString.concat(", " + this.toppings[index]);
   }
-
-//  .forEach(function(key) {
-//     console.log(this.toppings[key]);
-
-//   });
-  console.log(toppingsString);
+  else {
+    toppingsString = this.toppings[0];
+    for (let index = 1; index < (Object.keys(this.toppings).length); index++) {
+      toppingsString = toppingsString.concat(", " + this.toppings[index]);
+    }
+  }
   return toppingsString;
-
 }
 
 
@@ -65,6 +62,7 @@ function handlePizzaOrder(event) {
   pizza.calculateCost();
   console.log(pizza.totalCost);
   printOrder(pizza);
+  document.querySelector("form#number-in").reset();
 }
 
 window.addEventListener("load", function() {
