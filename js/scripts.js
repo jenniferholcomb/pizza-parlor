@@ -25,17 +25,19 @@ function handlePizzaOrder(event) {
 
   //const toppingsInput = document.querySelector(input#)
   const newPizza = new Pizza();
-  const toppings = [];
+  const toppingsInput = [];
   if (document.getElementById("topping1").checked === true) {
-    toppings.push("Pepperoni");
+    toppingsInput.push("Pepperoni");
   } 
   if (document.getElementById("topping2").checked === true) {
-    toppings.push("Pineapple");
+    toppingsInput.push("Pineapple");
   } 
   if (document.getElementById("topping3").checked === true) {
-    toppings.push("Extra Cheese");
+    toppingsInput.push("Extra Cheese");
   }
-  console.log(toppings);
+  console.log(toppingsInput);
+  const sizeInput = document.getElementById("size-seleciton").toString;
+  console.log(sizeInput);
 }
 
 window.addEventListener("load", function() {
