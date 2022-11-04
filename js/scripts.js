@@ -24,6 +24,7 @@ function printOrder(pizza) {
   document.querySelector("div#order-details").removeAttribute("class");
   document.querySelector(".toppings").innerText = pizza.toppings;
   document.querySelector(".size").innerText = pizza.size;
+  document.querySelector(".cost").innerText = pizza.totalCost;
 }
 
 function handlePizzaOrder(event) {
