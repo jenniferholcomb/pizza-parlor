@@ -26,7 +26,7 @@ This program allows a user to order a pizza on a website, user can choose toppin
 ''' 
 Describe: Pizza()
 
-Test: "It should return a Pizza object with three properties for toppings and size."
+Test: "It should return a Pizza object with two properties for toppings and size."
 Code: const myPizza = new Pizza(["pineapple", "pepperoni"], "small");
 Expected Output: Pizza { toppings: ["pineapple", "pepperoni"], size: "small"}
 
