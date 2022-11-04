@@ -60,7 +60,7 @@ Test: "Check if any toppings were added to order. If not returns a statement sta
 Code: if(this.toppings.length === 0)
 Output: "--NO TOPPINGS ADDED-"
 
-Describe: Orders()
+Describe: CustomerOrders()
 Test: "It should add all pizzas ordered to object Orders."
 Code: const myOrders = new Orders([Pizza: {"Pineapple", medium, cost}, Pizza: {Extra Cheese, small, cost});
 Expected Output: [Orders[1]: {"Pineapple", medium, cost}, Orders[2]: {Extra Cheese, small, cost}
