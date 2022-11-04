@@ -19,10 +19,24 @@ Pizza.prototype.calculateCost = function() {
   this.totalCost = cost;
 }
 
+Pizza.prototype.toppingsTicket = function() {
+  let toppingsString = "";
+  let index = 1;
+  Object.keys(this.toppings).forEach(function(key) {
+    toppingsString.concat(this.toppings[key]);
+    index++;
+  });
+  console.log(toppingsString);
+  return toppingsString;
+
+}
+
+
 // UI Logic
 function printOrder(pizza) {
+  let toppingsString = pizza.toppingsTicket();
   document.querySelector("div#order-details").removeAttribute("class");
-  document.querySelector(".toppings").innerText = pizza.toppings;
+  document.querySelector(".toppings").innerText = toppingsString;
   document.querySelector(".size").innerText = pizza.size;
   document.querySelector(".cost").innerText = pizza.totalCost;
 }
