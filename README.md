@@ -51,6 +51,13 @@ Test: "If Pizza.size = large, add 10 to total cost."
 Code: if (pizza.size = "large")
 Output: cost = cost + 10;
 
+Describe: Pizza.prototype.toppingsTicket = function()
+Test: "Loops through toppings keys in Pizza object, returns a string to print on ticket."
+Input: Pizza {Toppings: ["pineapple", "pepperoni"]}
+Code: for(index =0; index > this.toppings.length; index++) 
+        this.toppings[index] + ", "  
+Output: "pineapple, pepperoni"
+
 '''
 
 ## Known Bugs
