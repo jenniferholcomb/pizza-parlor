@@ -22,7 +22,7 @@ Pizza.prototype.calculateCost = function() {
 Pizza.prototype.toppingsTicket = function() {
   let toppingsString = "";
   if (Object.keys(this.toppings).length === 0) {
-
+    toppingsString = "--NO TOPPINGS ADDED--";
   }
   else {
     toppingsString = this.toppings[0];
@@ -62,7 +62,7 @@ function handlePizzaOrder(event) {
   pizza.calculateCost();
   console.log(pizza.totalCost);
   printOrder(pizza);
-  document.querySelector("form#number-in").reset();
+//  document.querySelector("form#number-in").reset();
 }
 
 window.addEventListener("load", function() {
