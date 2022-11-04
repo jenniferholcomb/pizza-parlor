@@ -1,8 +1,9 @@
 // Business logic for Pizza
 
-function Pizza() {
+function Pizza(toppings, size) {
   this.toppings = {};
   this.size = null;
+
 }
 
 Pizza.prototype.calculateCost = function() {
@@ -23,8 +24,7 @@ Pizza.prototype.calculateCost = function() {
 function handlePizzaOrder(event) {
   event.preventDefault();
 
-  //const toppingsInput = document.querySelector(input#)
-  const newPizza = new Pizza();
+
   const toppingsInput = [];
   if (document.getElementById("topping1").checked === true) {
     toppingsInput.push("Pepperoni");
@@ -36,8 +36,11 @@ function handlePizzaOrder(event) {
     toppingsInput.push("Extra Cheese");
   }
   console.log(toppingsInput);
-  const sizeInput = document.getElementById("size-seleciton").toString;
+  const sizeInput = document.getElementById("size-selection").value;
   console.log(sizeInput);
+
+  let pizza = new Pizza(toppingsInput, sizeInput);
+  console.log(pizza);
 }
 
 window.addEventListener("load", function() {
