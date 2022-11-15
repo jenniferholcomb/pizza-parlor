@@ -24,51 +24,50 @@ This program allows a user to order a pizza on a website, user can choose toppin
 ##Tests
 
 ''' 
+
 Describe: Pizza()
 Test: "It should return a Pizza object with three properties of toppings, size, and total cost of pizza."
-Code: const myPizza = new Pizza(["pineapple", "pepperoni"], "medium", 24);
-Expected Output: Pizza { toppings: ["pineapple", "pepperoni"], size: "medium", cost: 24}
+Code: const myPizza = new Pizza(["pineapple", "pepperoni"], "medium", 0);
 
-Describe: Pizza.prototype.calculateCost = function()
-Test: "It should take the user's topping and size selection, then determine cost of pizza."
-Code: let cost = 10 + (this.toppings.length * 4) + 6
-Expected Output: cost = 24
+Describe: Pizza.prototype.calculateCost 
+Test: "Should add $4 for each topping added."
+Code: const myPizza = new Pizza(["pineapple", "pepperoni"], "medium", 0);
+Output: cost = 8
 
-Test: "It should take the number of toppings in Pizza object and multiply by length of Pizza.toppings keys, and add to total cost."
-Code: Object.keys(this.toppings).length * perTopping
-Output: 2 * 4 = 8
+Test: "Should add the total cost of toppings to base price."
+Code: const myPizza = new Pizza(["pineapple", "pepperoni"], "medium", 0);
+Output: 18
 
-Test: "If Pizza.size = small, no additional cost added to total cost."
-Code: if (pizza.size === "small")
-Output: return cost;
+Test: "Should calculate the total cost of pizza for size small."
+Code: const myPizza = new Pizza(["pineapple", "pepperoni"], "medium", 0);
+Output: 18;
 
-Test: "If Pizza.size = medium, add 6 to total cost."
-Code: if (pizza.size = "medium")
-Output: cost = cost + 6;
+Test: "Should calculate the total cost of pizza for size medium."
+Code: const myPizza = new Pizza(["pineapple", "pepperoni"], "medium", 0);
+Output: 24;
 
-Test: "If Pizza.size = large, add 10 to total cost."
-Code: if (pizza.size = "large")
-Output: cost = cost + 10;
+Test: "Should calculate the total cost of pizza for size large."
+Code: const myPizza = new Pizza(["pineapple", "pepperoni"], "medium", 0);
+Output: cost = 28;
 
-Describe: Pizza.prototype.toppingsTicket = function()
-Test: "Loops through toppings keys in Pizza object, returns a string to print on ticket."
-Input: Pizza {Toppings: ["pineapple", "pepperoni"]}
-Code:  for (index = 1; index < (Object.keys(this.toppings).length); index++)
+Describe: Pizza.prototype.toppingsTicket 
+Test: "Should return list of toppings to print on ticket."
+Code: const myPizza = new Pizza(["pineapple", "pepperoni"], "medium", 0);
 Output: "pineapple, pepperoni"
 
-Test: "Check if any toppings were added to order. If not, returns a statement stating no toppings ordered.
-Code: if(this.toppings.length === 0)
+Test: "Should check if any toppings were added to order. If not, returns a statement stating no toppings ordered.
+Code: const myPizza = new Pizza([], "medium", 0);
 Output: "--NO TOPPINGS ADDED-"
 
 Describe: CustomerOrders()
-Test: "It should add all pizzas ordered to object Orders."
+Test: "Should add all pizzas ordered to object Orders."
 Code: const myOrders = new Orders([Pizza: {"Pineapple", medium, cost}, Pizza: {Extra Cheese, small, cost});
-Expected Output: [Orders[1]: {"Pineapple", medium, cost}, Orders[2]: {Extra Cheese, small, cost}
 
-Describe: CustomerOrders.prototype.addPizza
-Test: "It should add Pizza objects to CustomerOrders object."
-Code: this.orders = ["pizza1, pizza2]
-Output: "pizza1, pizza2"
+Describe: CustomerOrders.prototype.addPizza 
+Test: "Should add Pizza orders to CustomerOrders object."
+Code: const myOrders = new Orders([Pizza: {"Pineapple", medium, cost}, Pizza: {Extra Cheese, small, cost});
+Output: "pizza1: pineapple; medium, 22/npizza2: extra cheese, small, 14"
+
 '''
 
 ## Known Bugs
