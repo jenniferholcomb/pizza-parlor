@@ -30,33 +30,41 @@ Test: "It should return a Pizza object with three properties of toppings, size, 
 Code: const myPizza = new Pizza(["pineapple", "pepperoni"], "medium", 0);
 
 Describe: Pizza.prototype.calculateCost 
+
 Test: "Should add $4 for each topping added."
 Code: const myPizza = new Pizza(["pineapple", "pepperoni"], "medium", 0);
+myPizza.calculateCost()
 Output: cost = 8
 
 Test: "Should add the total cost of toppings to base price."
 Code: const myPizza = new Pizza(["pineapple", "pepperoni"], "medium", 0);
+mypizza.calculateCost()
 Output: 18
 
 Test: "Should calculate the total cost of pizza for size small."
 Code: const myPizza = new Pizza(["pineapple", "pepperoni"], "medium", 0);
+myPizza.calculateCost()
 Output: 18;
 
 Test: "Should calculate the total cost of pizza for size medium."
 Code: const myPizza = new Pizza(["pineapple", "pepperoni"], "medium", 0);
+myPizza.calculateCost()
 Output: 24;
 
 Test: "Should calculate the total cost of pizza for size large."
 Code: const myPizza = new Pizza(["pineapple", "pepperoni"], "medium", 0);
+myPizza.calculateCost()
 Output: cost = 28;
 
 Describe: Pizza.prototype.toppingsTicket 
 Test: "Should return list of toppings to print on ticket."
 Code: const myPizza = new Pizza(["pineapple", "pepperoni"], "medium", 0);
+myPizza.toppingsTicket()
 Output: "pineapple, pepperoni"
 
 Test: "Should check if any toppings were added to order. If not, returns a statement stating no toppings ordered.
 Code: const myPizza = new Pizza([], "medium", 0);
+myPizza.toppingsTicket()
 Output: "--NO TOPPINGS ADDED-"
 
 Describe: CustomerOrders()
@@ -66,6 +74,7 @@ Code: const myOrders = new Orders([Pizza: {"Pineapple", medium, cost}, Pizza: {E
 Describe: CustomerOrders.prototype.addPizza 
 Test: "Should add Pizza orders to CustomerOrders object."
 Code: const myOrders = new Orders([Pizza: {"Pineapple", medium, cost}, Pizza: {Extra Cheese, small, cost});
+myOrders.addPizza()
 Output: "pizza1: pineapple; medium, 22/npizza2: extra cheese, small, 14"
 
 '''
